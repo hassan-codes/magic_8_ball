@@ -13,10 +13,10 @@ class BallPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Color.fromARGB(255, 0, 100, 0),
       appBar: AppBar(
         title: Text("Ask me anything"),
-        backgroundColor: Colors.blue[900],
+        backgroundColor: Color.fromARGB(255, 34, 139, 34),
       ),
       body: Ball(),
     );
@@ -29,20 +29,19 @@ class Ball extends StatefulWidget {
 }
 
 class _BallState extends State<Ball> {
-  int ballNumber = 0;
+  int ballNumber = 1;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Center(
         child: FlatButton(
-          child: Image.asset('images/ball$ballNumber.png'),
           onPressed: () {
-            print('$ballNumber');
             setState(() {
               ballNumber = Random().nextInt(5) + 1;
             });
           },
+          child: Image.asset('images/ball$ballNumber.png'),
         ),
       ),
     );
