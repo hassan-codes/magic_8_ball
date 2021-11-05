@@ -42,6 +42,8 @@ class _BallState extends State<Ball> {
             });
           },
           child: Image.asset('images/ball$ballNumber.png'),
+          highlightColor: Colors.transparent,
+          splashColor: Colors.transparent,
         ),
       ),
     );
